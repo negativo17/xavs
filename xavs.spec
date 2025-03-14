@@ -1,11 +1,14 @@
+%global commit r55
+%global date 20110821
+
 Name:           xavs
-Version:        0.1.55
-Release:        1%{?dist}
+Version:        0.1.55~%{date}svn%{commit}
+Release:        2%{?dist}
 Summary:        AVS1 (First-generation AVS Standards) library
 License:        GPLv2
 URL:            http://xavs.sourceforge.net/
 
-Source0:        https://sourceforge.net/code-snapshots/svn/x/xa/xavs/code/xavs-code-r55-trunk.zip
+Source0:        https://sourceforge.net/code-snapshots/svn/x/xa/xavs/code/xavs-code-%{commit}-trunk.zip
 Patch0:         %{name}-cflags.patch
 
 BuildRequires:  autoconf
@@ -63,5 +66,8 @@ rm -f %{buildroot}%{_libdir}/*.a
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Fri Mar 14 2025 Simone Caronni <negativo17@gmail.com> - 0.1.55~20110821svnr55-2
+- Convert to new pacakaging guidelines for snapshots.
+
 * Tue Aug 13 2024 Simone Caronni <negativo17@gmail.com> - 0.1.55-1
 - First build.
