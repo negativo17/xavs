@@ -3,7 +3,7 @@
 
 Name:           xavs
 Version:        0.1.55~%{date}svn%{commit}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        AVS1 (First-generation AVS Standards) library
 License:        GPLv2
 URL:            http://xavs.sourceforge.net/
@@ -15,7 +15,7 @@ BuildRequires:  autoconf
 BuildRequires:  automake
 BuildRequires:  gcc
 BuildRequires:  libtool
-#BuildRequires:  yasm
+BuildRequires:  yasm
 
 %description
 AVS is a complete standard system including system, video, audio, and digital
@@ -66,6 +66,9 @@ rm -f %{buildroot}%{_libdir}/*.a
 %{_libdir}/pkgconfig/%{name}.pc
 
 %changelog
+* Sat Nov 08 2025 Simone Caronni <negativo17@gmail.com> - 0.1.55~20110821svnr55-3
+- Bump release.
+
 * Fri Mar 14 2025 Simone Caronni <negativo17@gmail.com> - 0.1.55~20110821svnr55-2
 - Convert to new pacakaging guidelines for snapshots.
 
